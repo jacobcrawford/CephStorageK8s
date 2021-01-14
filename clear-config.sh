@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 sudo rm -rf /var/lib/rook/*
 
-DISK="/dev/sdb"
+
+# TODO confiqure your own disk partition
+DISK="/dev/sdc"
 # Zap the disk to a fresh, usable state (zap-all is important, b/c MBR has to be clean)
 # You will have to run this step for all disks.
 sgdisk --zap-all $DISK
